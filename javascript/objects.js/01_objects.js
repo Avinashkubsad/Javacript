@@ -16,13 +16,29 @@ const jsuser = {
 }
 
 
-console.log(jsuser)
-// console.log(jsuser.name)
-// console.log(jsuser["name"]);
-console.log(typeof mysmb)
+// console.log(jsuser)
+// // console.log(jsuser.name)
+// // console.log(jsuser["name"]);
+// console.log(typeof mysmb)
 
-console.log("age",jsuser.age)
-Object.freeze(jsuser)                  /// freeze i sused then no chnages can be made in the objects
+// console.log("age",jsuser.age)
+//Object.freeze(jsuser)                  /// freeze i sused then no chnages can be made in the objects
 
 jsuser.age =30
-console.log("age",jsuser.age)
+// console.log("age",jsuser.age)
+
+
+jsuser.greeting = function(){                    // objects as function or includes fucntion
+    console.log("Hi Avinash")
+}
+
+
+
+jsuser.greetingTwo = function(){
+    console.log(`Hi Avinash, ${this.name}`)
+}
+
+
+console.log(jsuser.greeting())
+
+console.log(jsuser.greetingTwo())
